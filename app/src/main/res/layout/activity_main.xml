@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context=".MainActivity">
+    <Button
+        android:fontFamily="@font/crazy_"
+        style="@style/Theme.AppCompat.Light"
+        android:id="@+id/FavoriteBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Избранное"
+        android:background="#132B50"
+        android:textColor="#FFFFFF"
+        android:onClick="openFavorites"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/crazy_"
+        android:hint="Введите имя персонажа или звездолета"
+        android:paddingTop="10dp"
+        android:text="Darth Vader"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FavoriteBtn" />
+
+    <Button
+        android:id="@+id/buttonSearch"
+        android:layout_width="91dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="8dp"
+        android:background="#132B50"
+        android:fontFamily="@font/crazy_"
+        android:onClick="searchButtonClicked"
+        android:paddingHorizontal="10dp"
+        android:text="Поиск"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FavoriteBtn" />
+
+    <TextView
+        android:fontFamily="@font/crazy_"
+        android:id="@+id/TextResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editSearch" />
+
+    <Button
+        android:fontFamily="@font/crazy_"
+        android:id="@+id/addToFavorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#132B50"
+        android:textColor="#FFFFFF"
+        android:text="Добавить в избранное"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextResult" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
